@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timer</title>
+</head>
+
+<body>
+    <h1>Stop watch</h1>
+    <p id="display"></p>
+    <script>
+
+        let clock = document.getElementById("display")
+        function timeDisplay() {
+            let d = new Date();
+            let hrs = d.getHours();
+            let mins = d.getMinutes();
+            let sec = d.getSeconds();
+            var am;
+            am = hrs < 12 ? "AM" : "PM";
+            if (hrs > 12) {
+                hrs = hrs % 12
+            }
+            clock.innerHTML = hrs + " : " + mins + " : " + sec + " : " + am
+        }
+        setInterval(timeDisplay, 1000)
+
+    </script>
+</body>
+
+</html>

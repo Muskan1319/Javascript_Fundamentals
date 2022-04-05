@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image slider</title>
+</head>
+
+<body>
+    <h1><u>Image slider</u>
+    </h1>
+    <img src="./images/IMG5.webp" id="slides" height="400px" width="400px" />
+    <script>
+        let arr = ["./images/IMG1.jpg", "./images/IMG4.jpg", "./images/IMG10.jpg", "./images/IMG9.jpg"]
+        var count = 0;
+        function interval() {
+            let image = document.getElementById("slides");
+            image.src = arr[count];
+            count++;
+            if (count == 4) {
+                count = 0
+            }
+        }
+        setInterval(interval, 2000)
+    </script>
+</body>
+
+</html>
